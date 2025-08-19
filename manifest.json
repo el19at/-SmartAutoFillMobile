@@ -1,22 +1,29 @@
 {
   "manifest_version": 2,
-  "name": "Smart AutoFill",
-  "version": "2.0",
-  "description": "Auto-save and auto-fill forms with user-defined rules.",
-  "permissions": ["storage", "tabs"],
+  "name": "Smart AutoFill mobile",
+  "version": "1.0.0",
+  "description": "Automatically fill forms based on saved rules.",
+  "author": "el19at",
+  "icons": {
+    "48": "icons/autoSaveIcon48.png",
+    "128": "icons/autoSaveIcon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
   "background": {
     "scripts": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_end",
-      "all_frames": true
+      "js": ["content.js"]
     }
   ],
   "options_ui": {
     "page": "options.html",
-    "open_in_tab": true
+    "browser_style": true
   }
 }
