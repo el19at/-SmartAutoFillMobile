@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart AutoFill Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>Smart AutoFill Rules</h1>
+
+  <form id="ruleForm">
+    <input type="text" id="match" placeholder="Field contains..." required>
+    <input type="text" id="value" placeholder="Fill with..." required>
+    <button type="submit">Add Rule</button>
+  </form>
+
+  <div style="margin-top:20px; display:flex; flex-direction:column; gap:10px;">
+    <button id="exportBtn">Copy Rules to Clipboard</button>
+    <button id="importBtn">Import Rules from JSON</button>
+  </div>
+
+  <ul id="rulesList"></ul>
+
+  <script src="options.js"></script>
+</body>
+</html>
